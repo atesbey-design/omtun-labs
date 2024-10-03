@@ -11,8 +11,7 @@ import {
   Laptop,
   Rocket,
   Users,
-  Briefcase,
-  ChevronRight,
+
   Menu,
   X,
 } from "lucide-react";
@@ -87,7 +86,7 @@ const AnimatedSection = ({ children }: { children: React.ReactNode }) => {
   );
 };
 
-export function Home() {
+export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("");
 
@@ -601,4 +600,4 @@ export function Home() {
   );
 }
 
-export default Home;
+

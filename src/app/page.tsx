@@ -38,6 +38,14 @@ const projects = [
       "İzmir Events, İzmir'deki etkinlikleri takip etmek ve bu etkinlikler hakkında bilgi almak için kullanılan bir platform.",
     imageUrl: "/izmirevent.jpeg",
   },
+  {
+    id: 5,
+    name: "Otopark Yönetim Sistemi",
+    description:
+      "Otopark yönetim sistemi, otoparklarınızı daha verimli hale getirmek için geliştirilen bir yazılımdır.",
+    imageUrl: "/otopark.png",
+  },
+  
 ];
 
 const Teams = [

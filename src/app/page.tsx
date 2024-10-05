@@ -6,15 +6,7 @@ import { motion, useAnimation, useInView } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import {
-  Code,
-  Laptop,
-  Rocket,
-  Users,
-
-  Menu,
-  X,
-} from "lucide-react";
+import { Code, Laptop, Rocket, Users, Menu, X } from "lucide-react";
 import Image from "next/image";
 
 const projects = [
@@ -38,6 +30,13 @@ const projects = [
     description:
       "Ürünlerin stok ve takip işlemlerini kolaylaştıran yenilikçi bir otomasyon sistemi.",
     imageUrl: "/stoktakip.png",
+  },
+  {
+    id: 4,
+    name: "İzmir Events",
+    description:
+      "İzmir Events, İzmir'deki etkinlikleri takip etmek ve bu etkinlikler hakkında bilgi almak için kullanılan bir platform.",
+    imageUrl: "/izmirevent.jpeg",
   },
 ];
 
@@ -92,7 +91,13 @@ export default function Home() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ["home", "services", "projects", "about", "contact"];
+      const sections = [
+        "Anasayfa",
+        "Hizmetlerimiz",
+        "Projelerimiz",
+        "Biz Kimiz",
+        "İletişime Geçin",
+      ];
       const scrollPosition = window.scrollY;
 
       for (const section of sections) {
@@ -170,22 +175,29 @@ export default function Home() {
             />
           </Link>
           <nav className="hidden md:flex space-x-8">
-            {["home", "services", "projects", "about", "contact"].map(
-              (item) => (
-                <Link
-                  key={item}
-                  href={`#${item}`}
-                  className={`text-xl font-medium hover:text-purple-600 transition-colors ${
-                    activeSection === item ? "text-purple-600" : "text-gray-800"
-                  }`}
-                >
-                  {item.charAt(0).toUpperCase() + item.slice(1)}
-                </Link>
-              )
-            )}
+            {[
+              "Anasayfa",
+              "Hizmetlerimiz",
+              "Projelerimiz",
+              "Biz Kimiz",
+              "İletişim",
+            ].map((item) => (
+              <Link
+                key={item}
+                href={`#${item.toLowerCase()}`}
+                className={`text-xl font-medium hover:text-purple-600 transition-colors ${
+                  activeSection === item ? "text-purple-600" : "text-gray-800"
+                }`}
+              >
+                {item.charAt(0).toUpperCase() + item.slice(1)}
+              </Link>
+            ))}
           </nav>
-          <Button className="hidden md:inline-flex text-white bg-purple-600 hover:bg-purple-700 border-transparent text-xl font-medium py-2 h-12">
-            Bize Ulaşın
+        
+          <Button
+         
+          className="hidden md:inline-flex text-white bg-purple-600 hover:bg-purple-700 border-transparent text-xl font-medium py-2 h-12">
+           <a href="https://wa.me/905531211493?text=Merhabalar%20hizmet%20almak%20istiyorum">Bize Ulaşın</a>
           </Button>
           <button className="md:hidden" onClick={toggleMenu}>
             {isMenuOpen ? (
@@ -205,20 +217,27 @@ export default function Home() {
           className="fixed inset-0 z-40 bg-gray-50"
         >
           <div className="container mx-auto px-4 py-4 flex flex-col items-center space-y-8 mt-16">
-            {["home", "services", "projects", "about", "contact"].map(
-              (item) => (
-                <Link
-                  key={item}
-                  href={`#${item}`}
-                  className="text-lg font-medium hover:text-purple-600 transition-colors"
-                  onClick={toggleMenu}
-                >
-                  {item.charAt(0).toUpperCase() + item.slice(1)}
-                </Link>
-              )
-            )}
-            <Button variant="outline" onClick={toggleMenu}>
-              Bize Ulaşın
+            {[
+              "Anasayfa",
+              "Hizmetlerimiz",
+              "Projelerimiz",
+              "Biz Kimiz",
+              "İletişime Geçin",
+            ].map((item) => (
+              <Link
+                key={item}
+                href={`#${item}`}
+                className="text-lg font-medium hover:text-purple-600 transition-colors"
+                onClick={toggleMenu}
+              >
+                {item.charAt(0).toUpperCase() + item.slice(1)}
+              </Link>
+            ))}
+            <Button
+              variant="outline"
+              
+            >
+              <a href="https://wa.me/905531211493?text=Merhabalar%20hizmet%20almak%20istiyorum">Bize Ulaşın</a>
             </Button>
           </div>
         </motion.div>
@@ -227,7 +246,7 @@ export default function Home() {
       {/* Hero Section */}
       <main className="flex-grow pt-16">
         <section
-          id="home"
+          id="anasayfa"
           className="relative h-[60vh] bg-white overflow-hidden"
         >
           <div
@@ -271,19 +290,23 @@ export default function Home() {
                 transition={{ duration: 0.5, delay: 0.4 }}
                 className="flex flex-col md:flex-row justify-center space-y-4 md:space-y-0 md:space-x-4"
               >
-                <Button
-                  size="lg"
-                  className="text-lg px-8 bg-purple-600 text-white"
-                >
-                  Hizmetlerimiz
-                </Button>
-                <Button
-                  size="lg"
-                  variant="outline"
-                  className="text-lg px-8 border-purple-700 text-purple-700"
-                >
-                  İletişime Geçin
-                </Button>
+                <Link href="#hizmetlerimiz">
+                  <Button
+                    size="lg"
+                    className="text-lg px-8 bg-purple-600 text-white"
+                  >
+                    Hizmetlerimiz
+                  </Button>
+                </Link>
+                <Link href="#iletişim">
+                  <Button
+                    size="lg"
+                    variant="outline"
+                    className="text-lg px-8 border-purple-700 text-purple-700"
+                  >
+                    İletişime Geçin
+                  </Button>
+                </Link>
               </motion.div>
             </div>
           </div>
@@ -291,7 +314,7 @@ export default function Home() {
 
         {/* Services Section */}
         <AnimatedSection>
-          <section id="services" className="py-20 bg-gray-100 " >
+          <section id="hizmetlerimiz" className="py-20 bg-gray-100 ">
             <div className="container mx-auto px-4">
               <div className="grid grid-cols-1 md:grid-cols-5 gap-8 justify-center">
                 {[
@@ -302,13 +325,15 @@ export default function Home() {
                   },
                   {
                     icon: Code,
-                    title:"Bot Geliştirme",
-                    description:"Sektörünüze özel botlar geliştirmek için uzman ekibimiz",
+                    title: "Bot Geliştirme",
+                    description:
+                      "Sektörünüze özel botlar geliştirmek için uzman ekibimiz",
                   },
                   {
                     icon: Users,
-                    title:"Teknik Destek",
-                    description:"Müşterilerinize hızlı ve etkili teknik destek",
+                    title: "Teknik Destek",
+                    description:
+                      "Müşterilerinize hızlı ve etkili teknik destek",
                   },
                   {
                     icon: Rocket,
@@ -341,7 +366,7 @@ export default function Home() {
 
         {/* Projects Section */}
         <AnimatedSection>
-          <section id="projects" className="py-20 bg-white">
+          <section id="projelerimiz" className="py-20 bg-white">
             <div className="container mx-auto px-4">
               <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-12">
                 Projelerimiz
@@ -375,70 +400,71 @@ export default function Home() {
 
         {/* About Section */}
         <AnimatedSection>
-  <section className="py-24 bg-gradient-to-b from-gray-100 to-gray-200">
-    <div className="container mx-auto px-4">
-      <div className="flex flex-col lg:flex-row items-center justify-between">
-        <div className="w-full lg:w-1/2 mb-12 lg:mb-0 ">
-          <div className="relative w-full aspect-square max-w-md mx-auto bg-white hover:scale-105 transition-transform duration-500 ease-in-out">
-            <Image
-              src="/omtun-nobg.png"
-              alt="OmtunLabs Team"
-              layout="fill"
-              objectFit="cover"
-              className="rounded-2xl shadow-xl invert"
-            />
-            <div className="absolute -bottom-6 -right-6 bg-purple-600 text-white p-4 rounded-lg shadow-lg">
-              <p className="text-2xl font-bold">10+</p>
-              <p className="text-sm">Aktif Projeler</p>
+          <section id="bizkimiz" className="py-24 bg-gradient-to-b from-gray-100 to-gray-200">
+            <div className="container mx-auto px-4">
+              <div className="flex flex-col lg:flex-row items-center justify-between">
+                <div className="w-full lg:w-1/2 mb-12 lg:mb-0 ">
+                  <div className="relative w-full aspect-square max-w-md mx-auto bg-white hover:scale-105 transition-transform duration-500 ease-in-out">
+                    <Image
+                      src="/omtun-nobg.png"
+                      alt="OmtunLabs Team"
+                      layout="fill"
+                      objectFit="cover"
+                      className="rounded-2xl shadow-xl invert"
+                    />
+                    <div className="absolute -bottom-6 -right-6 bg-purple-600 text-white p-4 rounded-lg shadow-lg">
+                      <p className="text-2xl font-bold">10+</p>
+                      <p className="text-sm">Aktif Projeler</p>
+                    </div>
+                  </div>
+                </div>
+                <div className="w-full lg:w-1/2 lg:pl-12">
+                  <h2 className="text-4xl font-bold mb-6 text-gray-800">
+                    OmtunLabs Hakkında
+                  </h2>
+                  <p className="text-xl mb-8 text-gray-600">
+                    OmtunLabs, uçtan uca projeler geliştirerek geleceğin
+                    teknolojilerini bugünden şekillendiren yenilikçi bir yazılım
+                    ajansıdır. Yapay zeka, blockchain, bulut bilişim ve daha
+                    birçok alanda sunduğumuz öncü çözümlerle işletmelerin
+                    dijital dönüşümüne öncülük ediyor, ihtiyaçlarına özel
+                    yazılım çözümleri sunarak rekabetçi avantaj sağlamalarına
+                    yardımcı oluyoruz.
+                  </p>
+                  <div className="grid grid-cols-2 gap-6 mb-8">
+                    <div className="bg-white p-6 rounded-lg shadow-md transition transform hover:bg-gray-200 hover:shadow-lg hover:scale-105">
+                      <h3 className="text-2xl font-semibold mb-3 text-purple-600">
+                        İnovasyon
+                      </h3>
+                      <p className="text-gray-600">
+                        En son teknolojileri kullanarak müşterilerimize rekabet
+                        avantajı sağlıyoruz.
+                      </p>
+                    </div>
+                    <div className="bg-white p-6 rounded-lg shadow-md transition transform hover:bg-gray-200 hover:shadow-lg hover:scale-105">
+                      <h3 className="text-2xl font-semibold mb-3 text-purple-600">
+                        Uzmanlık
+                      </h3>
+                      <p className="text-gray-600">
+                        Deneyimli ekibimiz, karmaşık problemlere yaratıcı
+                        çözümler üretiyor.
+                      </p>
+                    </div>
+                  </div>
+                  <Link href="#bizkimiz">
+                  <Button className="bg-purple-600 text-white hover:bg-purple-700">
+                    Ekibimizle Tanışın
+                  </Button>
+                  </Link>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
-        <div className="w-full lg:w-1/2 lg:pl-12">
-          <h2 className="text-4xl font-bold mb-6 text-gray-800">
-            OmtunLabs Hakkında
-          </h2>
-          <p className="text-xl mb-8 text-gray-600">
-            OmtunLabs, uçtan uca projeler geliştirerek geleceğin
-            teknolojilerini bugünden şekillendiren yenilikçi bir yazılım
-            ajansıdır. Yapay zeka, blockchain, bulut bilişim ve daha
-            birçok alanda sunduğumuz öncü çözümlerle işletmelerin
-            dijital dönüşümüne öncülük ediyor, ihtiyaçlarına özel
-            yazılım çözümleri sunarak rekabetçi avantaj sağlamalarına
-            yardımcı oluyoruz.
-          </p>
-          <div className="grid grid-cols-2 gap-6 mb-8">
-            <div className="bg-white p-6 rounded-lg shadow-md transition transform hover:bg-gray-200 hover:shadow-lg hover:scale-105">
-              <h3 className="text-2xl font-semibold mb-3 text-purple-600">
-                İnovasyon
-              </h3>
-              <p className="text-gray-600">
-                En son teknolojileri kullanarak müşterilerimize rekabet
-                avantajı sağlıyoruz.
-              </p>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-md transition transform hover:bg-gray-200 hover:shadow-lg hover:scale-105">
-              <h3 className="text-2xl font-semibold mb-3 text-purple-600">
-                Uzmanlık
-              </h3>
-              <p className="text-gray-600">
-                Deneyimli ekibimiz, karmaşık problemlere yaratıcı
-                çözümler üretiyor.
-              </p>
-            </div>
-          </div>
-          <Button className="bg-purple-600 text-white hover:bg-purple-700">
-            Ekibimizle Tanışın
-          </Button>
-        </div>
-      </div>
-    </div>
-  </section>
-</AnimatedSection>
-
+          </section>
+        </AnimatedSection>
 
         {/* Teams Section */}
         <AnimatedSection>
-          <section id="teams" className="py-20 bg-white">
+          <section id="bizkimiz" className="py-20 bg-white">
             <div className="container mx-auto px-4">
               <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-12">
                 Takımımız
@@ -477,7 +503,7 @@ export default function Home() {
 
         {/* Contact Section */}
         <AnimatedSection>
-          <section id="contactus" className="py-24 bg-gray-50">
+          <section id="iletişim" className="py-24 bg-gray-50">
             <div className="container mx-auto px-4">
               <div className="max-w-3xl mx-auto bg-gray-100 rounded-lg p-8">
                 <h2 className="text-4xl font-bold mb-6 text-center text-gray-900">
@@ -530,7 +556,17 @@ export default function Home() {
                       Mesaj Gönder
                     </Button>
                   </div>
-                  {<p className={`text-center mt-4 ${status === 'Message sent successfully!' ? 'text-green-500' : 'text-red-500'}`}>{status}</p>}
+                  {
+                    <p
+                      className={`text-center mt-4 ${
+                        status === "Message sent successfully!"
+                          ? "text-green-500"
+                          : "text-red-500"
+                      }`}
+                    >
+                      {status}
+                    </p>
+                  }
                 </form>
                 <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
                   <div>
@@ -599,5 +635,3 @@ export default function Home() {
     </div>
   );
 }
-
-

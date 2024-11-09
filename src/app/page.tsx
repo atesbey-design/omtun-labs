@@ -45,7 +45,12 @@ const projects = [
       "Otopark yönetim sistemi, otoparklarınızı daha verimli hale getirmek için geliştirilen bir yazılımdır.",
     imageUrl: "/otopark.png",
   },
-  
+  {
+    id: 6,
+    name: "Yapay Zeka Destekli Kod Oluşturma",
+    description: "Yapay zeka destekli kod oluşturma, yazılım geliştirme süreçlerini hızlandırmak ve yazılım kalitesini artırmak için geliştirilen bir yazılımdır.",
+    imageUrl: "/buildfy.png",
+  },
 ];
 
 const Teams = [
@@ -338,6 +343,13 @@ export default function Home() {
                       "Sektörünüze özel botlar geliştirmek için uzman ekibimiz",
                   },
                   {
+                    icon: Laptop,
+                    title: "Yapay Zeka Geliştirme",
+                    description:
+                      "Yapay zeka aracı oluşturmak için uzman ekibimiz",
+                  },
+ 
+                  {
                     icon: Users,
                     title: "Teknik Destek",
                     description:
@@ -482,16 +494,15 @@ export default function Home() {
                   <motion.div
                     key={index}
                     className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow transform hover:scale-105 duration-500 flex flex-col"
-                    style={{ height: "100%" }} // Kartların aynı yükseklikte olmasını sağlar
+                    style={{ height: "100%" }}
                   >
-                    <div className="w-full h-[450px] overflow-hidden">
+                    <div className="relative w-full pt-[100%]">
                       <Image
                         src={member.imageUrl}
                         alt={member.name}
-                        layout="responsive"
-                        width={600}
-                        height={600}
-                        className="w-full h-full object-cover"
+                        fill
+                        className="absolute top-0 left-0 w-full h-full object-cover"
+                        sizes="(max-width: 768px) 100vw, 33vw"
                       />
                     </div>
                     <div className="p-6 text-center flex-grow">

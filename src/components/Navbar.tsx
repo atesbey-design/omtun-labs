@@ -90,14 +90,14 @@ export default function Navbar() {
             : "bg-transparent"
         }`}
       >
-        <div className="container mx-auto flex items-center justify-between px-4 py-4">
+        <div className="container mx-auto flex items-center justify-between px-4 py-2">
           <Link href="/" className="flex items-center space-x-2 group">
             <div className="relative overflow-hidden">
               <Image
                 src="/omtun-nobg.png"
                 alt="OMTUN Labs"
-                width={96}
-                height={96}
+                width={64}
+                height={64}
                 className="transition-transform duration-300 group-hover:scale-110 filter invert"
               />
             </div>
@@ -108,8 +108,8 @@ export default function Navbar() {
               <Link
                 key={item.name}
                 href={item.href}
-                className={`relative px-4 py-2 text-base font-medium rounded-lg transition-all duration-300 group hover:bg-purple-50 ${
-                  activeSection === item.id
+                className={`relative px-3 py-1.5 text-sm font-medium rounded-lg transition-all duration-300 group hover:bg-purple-50 ${
+                  activeSection === item.name.toLowerCase()
                     ? "text-purple-600"
                     : "text-gray-600 hover:text-purple-600"
                 }`}
@@ -118,7 +118,7 @@ export default function Navbar() {
                 <span className="absolute bottom-0 left-0 w-full h-0.5 bg-purple-600 transform scale-x-0 transition-transform duration-300 group-hover:scale-x-100" />
               </Link>
             ))}
-            <Button className="ml-4 bg-purple-600 hover:bg-purple-700 text-white px-6 py-2 rounded-lg transition-all duration-300 transform hover:translate-y-[-2px] hover:shadow-lg">
+            <Button className="ml-4 bg-purple-600 hover:bg-purple-700 text-white px-4 py-1.5 rounded-lg text-sm transition-all duration-300 transform hover:translate-y-[-2px] hover:shadow-lg h-8">
               <a
                 href="https://wa.me/905531211493?text=Merhabalar%20hizmet%20almak%20istiyorum"
                 className="flex items-center space-x-2"
@@ -129,10 +129,10 @@ export default function Navbar() {
           </nav>
 
           <button
-            className="md:hidden p-2 rounded-lg hover:bg-purple-50 transition-colors"
+            className="md:hidden p-1.5 rounded-lg hover:bg-purple-50 transition-colors"
             onClick={toggleMenu}
           >
-            {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            {isMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
           </button>
         </div>
       </motion.header>
@@ -144,10 +144,10 @@ export default function Navbar() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.2 }}
-            className="fixed inset-0 z-40 bg-white/95 backdrop-blur-lg pt-24"
+            className="fixed inset-0 z-40 bg-white/95 backdrop-blur-lg pt-20"
           >
             <div className="container mx-auto px-4">
-              <div className="flex flex-col space-y-4">
+              <div className="flex flex-col space-y-3">
                 {navItems.map((item) => (
                   <motion.div
                     key={item.name}
@@ -157,11 +157,7 @@ export default function Navbar() {
                   >
                     <Link
                       href={item.href}
-                      className={`block px-4 py-3 text-lg font-medium rounded-lg hover:bg-purple-50 transition-all ${
-                        activeSection === item.id
-                          ? "text-purple-600 bg-purple-50"
-                          : "text-gray-600 hover:text-purple-600"
-                      }`}
+                      className="block px-4 py-2 text-base font-medium text-gray-600 rounded-lg hover:bg-purple-50 hover:text-purple-600 transition-all"
                       onClick={toggleMenu}
                     >
                       {item.name}
@@ -172,9 +168,9 @@ export default function Navbar() {
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.2, delay: 0.3 }}
-                  className="pt-4"
+                  className="pt-2"
                 >
-                  <Button className="w-full bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-lg transition-all duration-300">
+                  <Button className="w-full bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded-lg text-base transition-all duration-300">
                     <a href="https://wa.me/905531211493?text=Merhabalar%20hizmet%20almak%20istiyorum">
                       Bize Ulaşın
                     </a>

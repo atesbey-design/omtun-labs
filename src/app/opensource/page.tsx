@@ -55,7 +55,6 @@ const openSourceProjects = [
     forks: "15+",
     tag: "Tool",
   },
-
   {
     id: 3,
     name: "JSON Formatter",
@@ -76,6 +75,46 @@ const openSourceProjects = [
     forks: "10+",
     tag: "Tool",
   },
+  {
+    id: 4,
+    name: "Text to NFT",
+    description:
+      "Turn your text into unique NFT art using AI. Generate and mint NFTs directly from text descriptions.",
+    icon: Code,
+    image: "/projects/TEXTNFT.png", 
+    color: "bg-gradient-to-r from-pink-500 to-pink-600",
+    features: [
+      "AI art generation",
+      "NFT minting",
+      "Text to image",
+      "Blockchain integration"
+    ],
+    githubUrl: "https://github.com/omtunclabs/text-to-nft",
+    liveUrl: "https://text-to-nft-five.vercel.app/",
+    stars: "20+",
+    forks: "8+",
+    tag: "AI"
+  },
+  {
+    id: 5,
+    name: "API Generator",
+    description:
+      "Hızlı API geliştirme için mock data ve API response oluşturucu. İstediğiniz formatta test verisi ve API yanıtları oluşturun.",
+    icon: Code,
+    image: "/projects/APIGENERATOR.png",
+    color: "bg-gradient-to-r from-orange-500 to-orange-600", 
+    features: [
+      "Özelleştirilebilir API yanıtları",
+      "Mock data oluşturma",
+      "JSON/XML format desteği",
+      "Hızlı entegrasyon"
+    ],
+    githubUrl: "https://github.com/omtunclabs/api-generator",
+    liveUrl: "https://api-generator-ten.vercel.app/",
+    stars: "15+",
+    forks: "5+",
+    tag: "Tool"
+  }
 ];
 
 export default function OpenSourcePage() {

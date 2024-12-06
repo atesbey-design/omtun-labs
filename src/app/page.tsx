@@ -91,8 +91,7 @@ const openSourceProjects = [
     features: [
       "AI destekli kod dönüşümü",
       "React component çıktısı", 
-      "Kolay kullanım",
-      "Hızlı dönüşüm"
+      "Kolay kullanım"
     ],
     githubUrl: "https://github.com/omtunclabs/buildfy",
     liveUrl: "https://buildfy.vercel.app/",
@@ -252,9 +251,9 @@ export default function Home() {
                 <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 mt-16">
                   {[
                     { number: "17+", label: "Tamamlanan Proje" },
-                    { number: "5+", label: "Mutlu Müşteri" },
+                    { number: "8+", label: "Mutlu Müşteri" },
                     { number: "5+", label: "Yıllık Deneyim" },
-                    { number: "5+", label: "Uzman Ekip" }
+                    { number: "6+", label: "Open Source Projeler" }
                   ].map((stat, index) => (
                     <motion.div
                       key={index}
@@ -301,23 +300,7 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Scroll Indicator */}
-          <motion.div
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ 
-              duration: 0.8,
-              delay: 1,
-              repeat: Infinity,
-              repeatType: "reverse"
-            }}
-            className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-gray-400 text-center"
-          >
-            <div className="w-6 h-10 border-2 border-gray-400 rounded-full mx-auto mb-2 flex justify-center">
-              <div className="w-1 h-3 bg-gray-400 rounded-full mt-2" />
-            </div>
-            <span className="text-sm">Aşağı Kaydır</span>
-          </motion.div>
+      
         </section>
 
         {/* Services Section */}

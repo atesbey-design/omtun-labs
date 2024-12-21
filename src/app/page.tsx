@@ -53,6 +53,13 @@ const projects = [
       "Yapay zeka destekli kod oluşturma, yazılım geliştirme süreçlerini hızlandırmak ve yazılım kalitesini artırmak için geliştirilen bir yazılımdır.",
     imageUrl: "/buildfy.png",
   },
+  {
+    id: 7,
+    name: "CVFlow",
+    description:
+      "CVFlow, LinkedIn profilinizi profesyonel bir özgeçmişe dönüştürürken yapay zeka teknolojisinden faydalanarak CV'nizi optimize eden ve geliştiren yenilikçi bir platformdur.",
+    imageUrl: "/projects/CVFLOW.png",
+  },
 ];
 
 const Teams = [

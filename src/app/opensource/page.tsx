@@ -29,7 +29,7 @@ const openSourceProjects = [
       "Kolay kullanım",
       "Hızlı dönüşüm",
     ],
-    githubUrl: "https://github.com/omtunclabs/buildfy",
+    githubUrl: "https://github.com/OmTun-Labs/buildfy",
     liveUrl: "https://buildfy.vercel.app/",
     stars: "45+",
     forks: "20+",
@@ -49,7 +49,7 @@ const openSourceProjects = [
       "Kolay düzenleme",
       "Anında önizleme",
     ],
-    githubUrl: "https://github.com/omtunclabs/markdown-resume",
+    githubUrl: "https://github.com/OmTun-Labs/markdown-resume",
     liveUrl: "https://markdown-resume-builder.vercel.app/",
     stars: "35+",
     forks: "15+",
@@ -69,7 +69,7 @@ const openSourceProjects = [
       "Kolay kullanım",
       "Hızlı sonuç",
     ],
-    githubUrl: "https://github.com/omtunclabs/json-formatter",
+    githubUrl: "https://github.com/OmTun-Labs/json-formatter",
     liveUrl: "https://json-formatter-pearl.vercel.app/",
     stars: "25+",
     forks: "10+",
@@ -89,7 +89,7 @@ const openSourceProjects = [
       "Text to image",
       "Blockchain integration"
     ],
-    githubUrl: "https://github.com/omtunclabs/text-to-nft",
+    githubUrl: "https://github.com/OmTun-Labs/text-to-nft",
     liveUrl: "https://text-to-nft-five.vercel.app/",
     stars: "20+",
     forks: "8+",
@@ -109,7 +109,7 @@ const openSourceProjects = [
       "JSON/XML format desteği",
       "Hızlı entegrasyon"
     ],
-    githubUrl: "https://github.com/omtunclabs/api-generator",
+    githubUrl: "https://github.com/OmTun-Labs/api-generator",
     liveUrl: "https://api-generator-ten.vercel.app/",
     stars: "15+",
     forks: "5+",
@@ -244,7 +244,7 @@ export default function OpenSourcePage() {
                 değer katın ve geleceği birlikte şekillendirelim.
               </p>
               <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6">
-                <Link href="https://github.com/omtunclabs" target="_blank">
+                <Link href="https://github.com/OmTun-Labs" target="_blank">
                   <Button className="w-full sm:w-auto bg-white text-purple-700 hover:bg-gray-100 px-8 py-6 text-lg rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
                     <Github className="mr-2" /> GitHub
                   </Button>

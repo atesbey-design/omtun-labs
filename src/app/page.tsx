@@ -60,7 +60,7 @@ const projects = [
       "CVFlow, LinkedIn profilinizi profesyonel bir özgeçmişe dönüştürürken yapay zeka teknolojisinden faydalanarak CV'nizi optimize eden ve geliştiren yenilikçi bir platformdur.",
     imageUrl: "/projects/CVFLOW.png",
   },
-];
+]
 
 const Teams = [
   {
@@ -100,7 +100,7 @@ const openSourceProjects = [
       "React component çıktısı", 
       "Kolay kullanım"
     ],
-    githubUrl: "https://github.com/omtunclabs/buildfy",
+    githubUrl: "https://github.com/OmTun-Labs/buildfy",
     liveUrl: "https://buildfy.vercel.app/",
     stars: "45+",
     forks: "20+",
@@ -119,7 +119,7 @@ const openSourceProjects = [
       "Kolay düzenleme",
       "Anında önizleme"
     ],
-    githubUrl: "https://github.com/omtunclabs/markdown-resume",
+    githubUrl: "https://github.com/OmTun-Labs/markdown-resume",
     liveUrl: "https://markdown-resume-builder.vercel.app/",
     stars: "35+",
     forks: "15+",
@@ -139,7 +139,7 @@ const openSourceProjects = [
       "Kolay kullanım",
       "Hızlı sonuç"
     ],
-    githubUrl: "https://github.com/omtunclabs/json-formatter",
+    githubUrl: "https://github.com/OmTun-Labs/json-formatter",
     liveUrl: "https://json-formatter-pearl.vercel.app/",
     stars: "25+",
     forks: "10+",

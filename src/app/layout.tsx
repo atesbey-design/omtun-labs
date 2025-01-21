@@ -1,17 +1,18 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import { Analytics } from "@vercel/analytics/react";
+import Script from 'next/script';
 import "./globals.css";
 
+
 const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
+  src: "../fonts/GeistSans-Regular.woff2",
   variable: "--font-geist-sans",
-  weight: "100 900",
 });
+
 const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
+  src: "../fonts/GeistMono-Regular.woff2",
   variable: "--font-geist-mono",
-  weight: "100 900",
 });
 
 export const metadata: Metadata = {
@@ -118,9 +119,9 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="tr">
       <head>
@@ -193,10 +194,52 @@ export default function RootLayout({
         <link rel="author" href="/humans.txt" />
         <link rel="me" href="mailto:tunabostancibasi@gmail.com" />
         <link rel="me" href="mailto:omerbagcibasi@gmail.com" />
+        <Script
+          strategy="afterInteractive"
+          src={`https://www.googletagmanager.com/gtag/js?id=BURAYA_GOOGLE_ANALYTICS_ID`}
+        />
+        <Script
+          id="google-analytics"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'BURAYA_GOOGLE_ANALYTICS_ID');
+            `,
+          }}
+        />
+        <Script
+          id="schema-org"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "name": "OMTUN Labs",
+              "url": "https://omtunlabs.com",
+              "logo": "https://omtunlabs.com/omtun-nobg.png",
+              "description": "Modern teknolojiler ve yenilikçi çözümlerle işletmenizi geleceğe taşıyoruz.",
+              "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "İzmir",
+                "addressCountry": "TR"
+              },
+              "contactPoint": {
+                "@type": "ContactPoint",
+                "email": "info@omtunlabs.com",
+                "contactType": "customer service"
+              },
+              "sameAs": [
+                "https://github.com/OmTun-Labs",
+                "https://linkedin.com/company/omtun-labs"
+              ]
+            })
+          }}
+        />
       </head>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         {children}
         <Analytics />
       </body>

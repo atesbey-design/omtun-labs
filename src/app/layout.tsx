@@ -3,8 +3,6 @@ import { Analytics } from "@vercel/analytics/react";
 import Script from 'next/script';
 import "./globals.css";
 
-
-
 export const metadata: Metadata = {
   title: "Omtun Labs",
   description: "OMTUN Labs profesyonel geliştiricilerinin çalışma alanı",
@@ -91,8 +89,8 @@ export const metadata: Metadata = {
     images: ['/OmTun.png'],
   },
   verification: {
-    google: "google-site-verification-code",
-    yandex: "yandex-verification-code",
+    google: "ipS7tCbEpnva0A9U1LoyQ2-PgodCeZb2bKj446jmTs8",
+    yandex: "yandex-verification-code", 
     yahoo: "yahoo-site-verification-code",
     other: {
       me: ["tunabostancibasi@gmail.com", "omerbagcibasi@gmail.com"],

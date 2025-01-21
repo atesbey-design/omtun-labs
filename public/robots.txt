@@ -6,4 +6,5 @@ Allow: /
 Host: https://omtunlabs.com
 
 # Sitemaps
-Sitemap: https://omtunlabs.com/sitemap.xml 
+Sitemap: https://omtunlabs.com/sitemap.xml
+Sitemap: https://omtunlabs.com/server-sitemap.xml

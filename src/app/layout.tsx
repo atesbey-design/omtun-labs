@@ -1,19 +1,9 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
 import { Analytics } from "@vercel/analytics/react";
 import Script from 'next/script';
 import "./globals.css";
 
 
-const geistSans = localFont({
-  src: "../fonts/GeistSans-Regular.woff2",
-  variable: "--font-geist-sans",
-});
-
-const geistMono = localFont({
-  src: "../fonts/GeistMono-Regular.woff2",
-  variable: "--font-geist-mono",
-});
 
 export const metadata: Metadata = {
   title: "Omtun Labs",
@@ -239,7 +229,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+      <body >
         {children}
         <Analytics />
       </body>

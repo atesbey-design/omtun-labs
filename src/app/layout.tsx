@@ -226,6 +226,10 @@ export default function RootLayout({
             })
           }}
         />
+        <meta 
+          name="google-site-verification" 
+          content="ipS7tCbEpnva0A9U1LoyQ2-PgodCeZb2bKj446jmTs8" 
+        />
       </head>
       <body >
         {children}

@@ -24,6 +24,7 @@ export default function Navbar() {
         { id: "anasayfa", href: "/" },
         { id: "hizmetlerimiz", href: "/#hizmetlerimiz" },
         { id: "opensource", href: "/opensource" },
+        { id: "blog", href: "/blog" },
         { id: "projelerimiz", href: "/#projelerimiz" },
         { id: "biz-kimiz", href: "/#biz-kimiz" },
         { id: "iletisim", href: "/#iletisim" }
@@ -73,6 +74,7 @@ export default function Navbar() {
     { name: "Anasayfa", href: "/", id: "anasayfa" },
     { name: "Hizmetlerimiz", href: "/#hizmetlerimiz", id: "hizmetlerimiz" },
     { name: "Open Source", href: "/opensource", id: "opensource" },
+    { name: "Blog", href: "/blog", id: "blog" },
     { name: "Projelerimiz", href: "/#projelerimiz", id: "projelerimiz" },
     { name: "Biz Kimiz", href: "/#biz-kimiz", id: "biz-kimiz" },
     { name: "İletişim", href: "/#iletisim", id: "iletisim" },

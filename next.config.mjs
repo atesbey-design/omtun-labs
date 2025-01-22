@@ -3,6 +3,7 @@ const nextConfig = {
   output: 'standalone',
   reactStrictMode: true,
   swcMinify: true,
+  pageExtensions: ['js', 'jsx', 'mdx', 'ts', 'tsx'],
   async headers() {
     return [
       {
@@ -19,7 +20,17 @@ const nextConfig = {
         ]
       }
     ];
-  }
+  },
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'images.unsplash.com',
+        port: '',
+        pathname: '/**',
+      },
+    ],
+  },
 };
 
 export default nextConfig;

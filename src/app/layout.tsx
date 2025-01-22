@@ -184,7 +184,7 @@ export default function RootLayout({
         <link rel="me" href="mailto:omerbagcibasi@gmail.com" />
         <Script
           strategy="afterInteractive"
-          src={`https://www.googletagmanager.com/gtag/js?id=BURAYA_GOOGLE_ANALYTICS_ID`}
+          src={`https://www.googletagmanager.com/gtag/js?id=G-SGX5F0WM9E`}
         />
         <Script
           id="google-analytics"
@@ -194,7 +194,7 @@ export default function RootLayout({
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
-              gtag('config', 'BURAYA_GOOGLE_ANALYTICS_ID');
+              gtag('config', 'G-SGX5F0WM9E');
             `,
           }}
         />

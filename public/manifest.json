@@ -2,30 +2,36 @@
   "name": "Omtun Labs",
   "short_name": "Omtun Labs",
   "description": "OMTUN Labs profesyonel geliştiricilerinin çalışma alanı",
-  "start_url": "/",
+  "start_url": ".",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#7C3AED",
+  "orientation": "portrait",
+  "scope": "/",
   "icons": [
     {
       "src": "/OmTun.png",
       "sizes": "16x16",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any"
     },
     {
       "src": "/OmTun.png",
       "sizes": "32x32",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any"
     },
     {
       "src": "/OmTun.png",
       "sizes": "192x192",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any maskable"
     },
     {
       "src": "/OmTun.png",
       "sizes": "512x512",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any maskable"
     }
   ]
 } 
